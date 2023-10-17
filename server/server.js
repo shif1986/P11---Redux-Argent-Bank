@@ -13,6 +13,13 @@ const PORT = process.env.PORT || 3001
 
 // Connect to the database
 dbConnection()
+  .then((client) => {
+    console.log('Connected to the database');
+  })
+  .catch((err) => {
+    console.error('Database Connectivity Error:', err);
+  });
+
 
 // Handle CORS issues
 app.use(cors())
