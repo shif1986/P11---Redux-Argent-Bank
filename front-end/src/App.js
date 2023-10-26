@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import './assets/css/main.css';
 import configureStore from "./redux/store";
+import { Provider } from "react-redux";
+
 
 const store = configureStore();
 
