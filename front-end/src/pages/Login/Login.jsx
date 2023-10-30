@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await signIn({ email, password });
-      console.log(response);
+      console.log("MY RESPONSE,",response);
       if (response.status === 200) {
         dispatch(setToken(response.body.token));
       }
@@ -46,10 +46,10 @@ const Login = () => {
           <input type="checkbox" id="remember-me" />
           <label htmlFor="remember-me">Remember me</label>
         </div>
-        <Link to="/user" className="sign-in-button">
+        <button type="submit" className="sign-in-button">
           Sign In
-        </Link>
-      </form>
+        </button>
+      </form>    
     </section>
   );
 };
